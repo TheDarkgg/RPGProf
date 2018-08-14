@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ProgressBar
+        android:id="@+id/vertical_progressbar_monster"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="25dp"
+        android:progressDrawable="@drawable/vertical_progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_monster"
+        app:layout_constraintEnd_toStartOf="@+id/iv_monster"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_monster" />
+
+    <ImageView
+        android:id="@+id/iv_monster"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="19dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/orc"
+        app:layout_constraintBottom_toTopOf="@+id/btn_attack"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_progressbar_player"
+        app:layout_constraintStart_toEndOf="@+id/vertical_progressbar_monster"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/vertical_progressbar_player"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="25dp"
+        android:progressDrawable="@drawable/vertical_progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_monster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_monster"
+        app:layout_constraintTop_toTopOf="@+id/iv_monster" />
+
+    <Button
+        android:id="@+id/btn_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:layout_marginStart="12dp"
+        android:text="Attack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_heal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_monster" />
+
+    <Button
+        android:id="@+id/btn_heal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:text="Heal"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_attack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_attack"
+        app:layout_constraintTop_toTopOf="@+id/btn_attack" />
+
+</android.support.constraint.ConstraintLayout>
